@@ -17,27 +17,431 @@ body {
     line-height: 1.6;
 }
 
+h2 {
+    font-family: 'Raleway';
+    margin-left: 35px;
+   }
 
-/* HLAVICKA */
+   .nadpis {
+    padding-bottom: 10px;
+    margin-left: 3%;
+    position: relative;
+}
+
+.nadpis::after {
+    content: ' ';
+    position: absolute;
+    left: -50px;
+    bottom: 0;
+    width: 100px;
+    border-bottom: 4px solid #629edb;
+}
+
+img {
+    width: 100%;
+}
+
+.header {
+    background: url(images/island-hlavicka.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.perex {
+    color: white;
+    font-size: 14px;
+}
 
 .titulek {
-    font-family: 'Raleway', serif;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    padding-top: 30px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ 
+  @media (max-width: 500px) {
+   
+    img {
+        width: 100%;
+    }
+
+    /* HLAVICKA */
+    .header {
+        padding: 0 10%;
+    }
+
+    .perex {
+        color: white;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    hr {
+        align-items: center;
+        color: white;
+        border: none;
+        height: 3px;
+        background: white;
+        width: 30%;
+        opacity: 85%;
+        padding: 0;
+    }
+
+    .autor {
+        color: white;
+        font-style: italic;
+        font-size: 16px;
+    }
+
+    /* MENU */
+    .menu {
+        text-transform: uppercase;
+        font-family: 'Raleway', serif;
+        list-style: none;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: auto;
+    }
+
+    a, li {
+        color: grey;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    li {
+        border-bottom: 1px solid rgb(201, 201, 201);
+    }
+
+    /* OBSAH */
+   p {
+    font-size: 14px;
+    margin: 0 30px;
+    padding-bottom: 30px;
+    font-weight: 500;
+   }
+
+   /* FOTOGALERIE */
+   .popisek, .popisek-copy {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: gray;
+   }
+
+   .popisek {
+    font-weight: 600;
+   }
+
+   .foto-autor {
+    text-decoration: underline;
+    text-transform: capitalize;
+    color: gray;
+    font-size: 14px;
+   }
+
+   .galerie {
+    box-shadow: 1px 20px 15px #79797967;
+  }
+
+  .galerie img {
+    width: 100%;
+   }
+
+    /* PATICKA */
+   footer {
+    padding-top: 10px;
+    font-size: 8px;
+    color: rgb(174, 171, 171);
+  }
+  
+  footer p, footer a {
+    color: grey;
+    font-size: 12px;
+    font-weight: 200;
+  }
+  
+  footer a {
+    text-decoration: underline;
+  }
+
+  }
+
+/*TABLET*/
+@media (min-width: 500px) and (max-width: 1000px) {
+
+    p {
+        padding: 0 3%;
+    }
+
+/*HLAVICKA*/
+    .header {
+        padding: 5%;
+    }
+
+    .titulek {
+        font-size: 50px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .perex {
+        padding: 0 10%;
+    }
+
+    .autor {
+        color: white;
+        opacity: 75%;
+        font-style: italic;
+    }
+
+    hr {
+        align-items: center;
+        color: white;
+        border: none;
+        height: 3px;
+        background: white;
+        width: 20%;
+        opacity: 85%;
+        padding: 0;
+    }
+
+/*MENU*/
+    .menu {
+        display: flex;
+        justify-content: center;
+        flex: 1 1 1;
+        padding: 0;
+        margin: 25px;
+        border-top: 1px solid rgb(199, 197, 197);
+        border-bottom: 1px solid rgb(199, 197, 197);
+        text-align: center;
+    }
+
+    .menu li, .menu a {
+        text-transform: uppercase;
+        list-style-type: none;
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+        color: grey;
+        padding: 5px 15px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+/* FOTOGALERIE */
+    .fotogallery {
+        margin: 0;
+        padding: 0;
+    }
+
+   .popisek-content, .popisek a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+    text-align: right;
+    transform: translateY(-45px);
+   }
+
+   .popisek {
+    font-weight: 600;
+   }
+
+   .galerie {
+    display: flex;
+    flex: 1 1 1;
+    flex-wrap: wrap;
+    box-shadow: 1px 20px 15px #79797967;
+   }
+
+   .foto {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+   }
+
+   .galerie p {
+    display: none;
+   }
+
+    /* PATICKA */
+    footer {
+    padding-top: 10px;
+    font-size: 8px;
+    font-weight: 600;
+    color: rgb(174, 171, 171);
+    }
+      
+    footer p, footer a {
+        color: grey;
+        font-size: 12px;
+      }
+      
+    footer a {
+        text-decoration: underline;
+    }
+
+}
+/*DESKTOP*/
+@media (min-width: 1000px) {
+
+    .foto-autor, .foto-content {
+        text-decoration: none;
+    }
+
+    .titulek {
+        font-size: 70px;
+    }
+
+    .perex {
+        padding: 0 25%;
+        font-size: 20px;
+    }
+
+    hr {
+        align-items: center;
+        color: white;
+        border: none;
+        height: 3px;
+        background: white;
+        width: 10%;
+        opacity: 85%;
+        padding: 0;
+    }
+
+    .autor {
+        font-style: italic;
+        padding-bottom: 15px;
+        color: white;
+        opacity: 85%;
+    }
+
+    p {
+        padding: 0 45px;
+    }
+
+    .header {
+        width: 100%;
+        min-height: 350px;
+        height: 450px;
+    }
+
+    .content {
+        position: relative;
+        top: -90px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 50px;
+        background-color: #fff;
+        box-shadow: 2px 5px 50px #999997;
+    }
+
+    .menu-introduction {
+        display: flex;
+    }
+
+    .menu {
+        min-width: 20%;
+    }
+
+    .menu li, .menu a {
+        text-transform: uppercase;
+        list-style-type: none;
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+        color: grey;
+        padding: 5px 15px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .introduction-text p {
+        padding: 0 30px;
+    }
+
+    .popisek-content {
+        font-family: 'Raleway';
+        padding-right: 20px;
+        color: white;
+        text-decoration: none;
+        text-transform: none;
+        text-align: right;
+        transform: translateY(-55px);
+    }
+
+    .section-what-1, .section-what-2 {
+        padding-left: 350px;
+    }
+    
+    .galerie {
+        font-family: 'Raleway', sans-serif;
+        color: white;
+        text-decoration: none;
+        text-transform: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .galerie .foto {
+        flex: 1 1 33.33%;
+        position: relative;
+        overflow: hidden;
+        transition-duration: 300ms;
+        transition-timing-function: linear;
+        transition-delay: 0;
+    }
+    
+    .foto img {
+        display: block;
+    }
+    
+    .popisek-copy {
+        font-weight: 400;
+      }
+    
+    .galerie .popisek {
+        width: 100%;
+        height: 30%;
+        font-size: 20px;
+        padding: 10px;
+        text-align: center;
+        background-color: rgba(17, 17, 17, 0.75);
+        transition-duration: 400ms;
+        transition-timing-function: linear;
+        transition-delay: 0;
+        font-weight: 600;
+        position: absolute;
+      }
+    
+    .foto:hover .popisek {
+        transform: translateY(-120%);
+      }
+    
+    footer {
+        padding-top: 0;
+        margin: 0;
+        padding-left: 150px;
+        color: grey;
+    }
+
+    footer a {
+        color: grey;
+        text-decoration: underline;
+    }
+
 }
 
 
-/* MENU */
 
 
-
-
-/* OBSAH */
-
-
-
-
-/* FOTOGALERIE */
-
-
-
-
-/* PATICKA */
