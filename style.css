@@ -31,7 +31,7 @@ h2 {
 .nadpis::after {
     content: ' ';
     position: absolute;
-    left: -50px;
+    left: -3%;
     bottom: 0;
     width: 100px;
     border-bottom: 4px solid #629edb;
@@ -361,13 +361,17 @@ a {
         text-decoration: none;
         font-family: 'Raleway', sans-serif;
         color: grey;
-        padding: 5px 15px;
+        padding-top: 10px;
         font-size: 16px;
         font-weight: 500;
     }
 
-    .introduction-text p {
-        padding: 0 30px;
+    .menu li {
+        border-bottom: 1px solid rgb(239, 237, 237);
+    }
+
+    .introduction-text {
+        padding: 0 20px 20px 30px;
     }
 
     .popisek-content {
